@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US" class="night">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Omeka Custom CSS Generator</title>
+        
+        <link href="//fonts.googleapis.com/css?family=Arvo:400" media="screen" rel="stylesheet" type="text/css" >
+        <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" media="all" rel="stylesheet" type="text/css" >
+        <link href="style/admin-bar.css" media="screen" rel="stylesheet" type="text/css" >
+        <link href="style/iconfonts.css" media="screen" rel="stylesheet" type="text/css" >
+        <link href="style/normalize.css" media="screen" rel="stylesheet" type="text/css" >
+        <link href="style/style.css" media="screen" rel="stylesheet" type="text/css" >
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="javascript/selectivizr.js"></script>
+        <script type="text/javascript" src="javascript/jquery-accessibleMegaMenu.js"></script>
+        <script type="text/javascript" src="javascript/respond.js"></script>
+        <script type="text/javascript" src="javascript/jquery-extra-selectors.js"></script>
+        <script type="text/javascript" src="javascript/seasons.js"></script>
+        <script type="text/javascript" src="javascript/globals.js"></script>
+        <script type="text/javascript" src="javascript/jscolor.js"></script>
+        <script type="text/javascript" src="javascript/applycss.js"></script>
+    </head>
+    <body id="home" class="admin-bar">
+        <div id="wrap">
+            <header role="banner">
+                <div id="site-title">
+                    <a href="#">Omeka Custom CSS Generator</a>
+                </div>
+            </header>
+            <nav id="top-nav" class="top" role="navigation">
+                <ul class="navigation">
+                    <li>
+                        <a href="#">[Browse Items]</a>
+                    </li>
+                    <li>
+                        <a href="#">[Browse Collections]</a>
+                    </li>
+                    <li>
+                        <a href="#">[About]</a>
+                    </li>
+                </ul>        
+            </nav>
+            <div id="content" tabid="-1">
+
+                <!-- CSS Generator -->
+                <div>
+                    <h2>CSS Generator</h2>
+                    <p class="item-description">This allows you to generate CSS for the custom CSS plugin that is now available on Omeka.net. The customizations possible include color schemes, <strike>fonts, block borders, and column layout</strike> (not yet implemented) can all be adjusted. It assumes you're using the Seasons theme, with the "night" setting. Any other combination of theme and setting may not produce expected results.</p>
+                    <p>Title Text Color&nbsp;&nbsp;<input id="title-color" class="jscolor color css-customize" value="FFE000"></p>
+                    <p>Title Background Color&nbsp;&nbsp;<input id="title-background-color" class="jscolor color css-customize" value="000000"></p>
+                    <p>Body Text Color&nbsp;&nbsp;<input id="body-color" class="jscolor color css-customize" value="CCCCCC"></p>
+                    <p>Body Background&nbsp;&nbsp;<input id="body-background-color" class="jscolor background-color css-customize" value="333333"></p>
+                    <p>Content Background&nbsp;&nbsp;<input id="content-background-color" class="jscolor background-color css-customize" value="252525"></p>
+                    <p>Content Border Color&nbsp;&nbsp;<input id="content-border-color" class="jscolor border-color css-customize" value="666666"></p>
+                    <p>Content Header Border Color&nbsp;&nbsp;<input id="content-header-border-color" class="jscolor border-color css-customize" value="313131"></p>
+                    <p>Link Color&nbsp;&nbsp;<input id="link-color" class="jscolor color css-customize" value="228494"></p>
+                    <p>Link Hover Color&nbsp;&nbsp;<input id="link-hover-color" class="jscolor color css-customize" value="3acacc"></p>
+                    <p>Link Visited Color&nbsp;&nbsp;<input id="link-visited-color" class="jscolor color css-customize" value="C0A900"></p>
+                    <p>Ui Link Color&nbsp;&nbsp;<input id="ui-link-color" class="jscolor color css-customize" value="def9ff"></p>
+                    <p>Filter Background&nbsp;&nbsp;<input id="filter-background-color" class="jscolor background-color css-customize" value="def9ff"></p>
+                    <p>Button Background&nbsp;&nbsp;<input id="button-background-color" class="jscolor background-color css-customize" value="4b6569"></p>
+                    <p>Text Field Background&nbsp;&nbsp;<input id="text-field-background-color" class="jscolor background-color css-customize" value="dfe2e2"></p>
+                    <p>Text Focus Color&nbsp;&nbsp;<input id="text-focus-color" class="jscolor color css-customize" value="fff"></p>
+                    <p>Nav Background&nbsp;&nbsp;<input id="nav-background-color" class="jscolor background-color css-customize" value="#BDBDBD"></p>
+                    <p>Subnav Background&nbsp;&nbsp;<input id="subnav-background-color" class="jscolor background-color css-customize" value="2796a9"></p>
+                    <!-- <p>Nav Focus Opacity&nbsp;&nbsp;<input id="nav-focus-opacity" class="jscolor opacity css-customize" value="0.85"></p> -->
+                    <!-- <p>Nav Selection Opacity&nbsp;&nbsp;<input id="nav-selection-opacity" class="jscolor opacity css-customize" value="0.9"></p> -->
+                </div>
+                <!-- End CSS Generator -->
+
+                <div id="featured-item">
+                    <h2>Featured Item</h2>
+                    <div class="item record">
+                        <h3><a href="#">An Item Title</a></h3>
+                        <a href="https://commons.wikimedia.org/wiki/File:Lensshoe_hubble.jpg" class="image">
+                            <img src="images/featured.jpg" alt="Featured Image">
+                        </a>
+                        <p class="item-description">A Description of the item.</p>
+                    </div>
+                </div>
+                <div id="featured-collection">
+                    <h2>Featured Collection</h2>
+                    <div class="collection record">
+                        <h3><a href="#">A Collection Title</a></h3>
+                        <a href="https://commons.wikimedia.org/wiki/File:Lensshoe_hubble.jpg" class="image">
+                            <img src="images/thumbnail.jpg" alt="Collection thumbnail">
+                        </a>
+                    </div>
+                </div>
+                <div id="recent-items">
+                    <h2>Recently Added Items</h2>
+                    <div class="item record">
+                        <h3><a href="#">Another Item Title</a></h3>
+                        <a href="https://commons.wikimedia.org/wiki/File:Lensshoe_hubble.jpg" class="image">
+                            <img src="images/thumbnail.jpg" alt="Item thumbnail">
+                        </a>
+                        <p class="item-description">A Description of the item.</p>
+                    </div>
+                    <p class="view-items-link"><a href="#">View All Items</a></p>
+                </div>
+            </div>
+            <footer role="contentinfo">
+                <div id="custom-footer-text">
+                    ||&nbsp;&nbsp;&nbsp;&nbsp; Copyright 2016 by Scott Enderle &nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp; All code and content is released under the terms of the <a href="https://opensource.org/licenses/MIT">MIT license</a>. &nbsp;&nbsp;&nbsp;&nbsp;||
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript">
+        jQuery(document).ready(function () {
+            Omeka.showAdvancedForm();
+            Omeka.skipNav();
+            Omeka.megaMenu("#top-nav");
+            Seasons.mobileSelectNav();
+            Applycss.colorUi();
+        });
+        </script>
+    </body>
+</html>
