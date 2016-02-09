@@ -192,8 +192,10 @@ if (!Applycss) {
 
     function cssCallback(inputId) {
         return function () {
+            var css = cssRender('custom-style', true);
             $('#custom-style').remove();
-            $('head').append(cssRender('custom-style', true));
+            $('head').append(css);
+            $('#css-container').text(css);
         };
     }
 
