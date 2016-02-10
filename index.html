@@ -12,6 +12,7 @@
         <link href="style/iconfonts.css" media="screen" rel="stylesheet" type="text/css" >
         <link href="style/normalize.css" media="screen" rel="stylesheet" type="text/css" >
         <link href="style/style.css" media="screen" rel="stylesheet" type="text/css" >
+        <link href="style/omekacss.css" media="screen" rel="stylesheet" type="text/css" >
 
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -49,26 +50,29 @@
                 <!-- CSS Generator -->
                 <div>
                     <h2>CSS Generator</h2>
-                    <p class="item-description">This allows you to generate CSS for the custom CSS plugin that is now available on Omeka.net. The customizations possible include color schemes, <strike>fonts, block borders, and column layout</strike> (not yet implemented) can all be adjusted. It assumes you're using the Seasons theme, with the "night" setting. Any other combination of theme and setting may not produce expected results.</p>
-                    <p>Title Text Color&nbsp;&nbsp;<input id="title-color" class="jscolor color css-customize" value="FFE000"></p>
-                    <p>Title Background Color&nbsp;&nbsp;<input id="title-background-color" class="jscolor color css-customize" value="000000"></p>
-                    <p>Body Text Color&nbsp;&nbsp;<input id="body-color" class="jscolor color css-customize" value="CCCCCC"></p>
-                    <p>Body Background&nbsp;&nbsp;<input id="body-background-color" class="jscolor background-color css-customize" value="333333"></p>
-                    <p>Content Background&nbsp;&nbsp;<input id="content-background-color" class="jscolor background-color css-customize" value="252525"></p>
-                    <p>Content Border Color&nbsp;&nbsp;<input id="content-border-color" class="jscolor border-color css-customize" value="666666"></p>
-                    <p>Content Header Border Color&nbsp;&nbsp;<input id="content-header-border-color" class="jscolor border-color css-customize" value="313131"></p>
-                    <p>Link Color&nbsp;&nbsp;<input id="link-color" class="jscolor color css-customize" value="228494"></p>
-                    <p>Link Hover Color&nbsp;&nbsp;<input id="link-hover-color" class="jscolor color css-customize" value="3acacc"></p>
-                    <p>Link Visited Color&nbsp;&nbsp;<input id="link-visited-color" class="jscolor color css-customize" value="C0A900"></p>
-                    <p>Ui Link Color&nbsp;&nbsp;<input id="ui-link-color" class="jscolor color css-customize" value="def9ff"></p>
-                    <p>Filter Background&nbsp;&nbsp;<input id="filter-background-color" class="jscolor background-color css-customize" value="def9ff"></p>
-                    <p>Button Background&nbsp;&nbsp;<input id="button-background-color" class="jscolor background-color css-customize" value="4b6569"></p>
-                    <p>Text Field Background&nbsp;&nbsp;<input id="text-field-background-color" class="jscolor background-color css-customize" value="dfe2e2"></p>
-                    <p>Text Focus Color&nbsp;&nbsp;<input id="text-focus-color" class="jscolor color css-customize" value="fff"></p>
-                    <p>Nav Background&nbsp;&nbsp;<input id="nav-background-color" class="jscolor background-color css-customize" value="#BDBDBD"></p>
-                    <p>Subnav Background&nbsp;&nbsp;<input id="subnav-background-color" class="jscolor background-color css-customize" value="2796a9"></p>
-                    <!-- <p>Nav Focus Opacity&nbsp;&nbsp;<input id="nav-focus-opacity" class="jscolor opacity css-customize" value="0.85"></p> -->
-                    <!-- <p>Nav Selection Opacity&nbsp;&nbsp;<input id="nav-selection-opacity" class="jscolor opacity css-customize" value="0.9"></p> -->
+                    <p class="item-description">This allows you to generate CSS for the custom CSS plugin that is now available on Omeka.net. It assumes you're using the Seasons theme, with the "night" setting. Any other combination of theme and setting may not produce expected results.</p>
+                    
+                    <p>Title Text Color&nbsp;&nbsp;<input id="title-text-color" class="jscolor" value="FFE000"></p>
+                    <p>Title Background Color&nbsp;&nbsp;<input id="title-background-color" class="jscolor" value="000000"></p>
+                    <p>Body Text Color&nbsp;&nbsp;<input id="body-text-color" class="jscolor" value="CCCCCC"></p>
+                    <p>Body Background Color&nbsp;&nbsp;<input id="body-background-color" class="jscolor" value="333333"></p>
+                    <p>Table Border Color&nbsp;&nbsp;<input id="table-border-color" class="jscolor" value="333333"></p>
+                    <p>Content Background Color&nbsp;&nbsp;<input id="content-background-color" class="jscolor" value="252525"></p>
+                    <p>Content Border Color&nbsp;&nbsp;<input id="content-border-color" class="jscolor" value="666666"></p>
+                    <p>Content Header Border Color&nbsp;&nbsp;<input id="content-header-border-color" class="jscolor" value="313131"></p>
+                    <p>Link Color&nbsp;&nbsp;<input id="link-color" class="jscolor" value="FFE000"></p>
+                    <p>Link Hover Color&nbsp;&nbsp;<input id="link-hover-color" class="jscolor" value="FFFFA0"></p>
+                    <p>Link Visited Color&nbsp;&nbsp;<input id="link-visited-color" class="jscolor" value="C0A900"></p>
+                    <p>Button Background Color&nbsp;&nbsp;<input id="button-background-color" class="jscolor" value="666666"></p>
+                    <p>Text Field Background Color&nbsp;&nbsp;<input id="text-field-background-color" class="jscolor" value="252525"></p>
+                    <p>Nav Background Color&nbsp;&nbsp;<input id="nav-background-color" class="jscolor" value="BDBDBD"></p>
+                    <p>Nav Link Color&nbsp;&nbsp;<input id="nav-link-color" class="jscolor" value="#6d6d6d"></p>
+                    <p>Nav Hover Color&nbsp;&nbsp;<input id="nav-hover-color" class="jscolor" value="313131"></p>
+                    <p>Header Font&nbsp;&nbsp;<input id="header-font" value="Arvo"></p>
+                    <p>Body Font&nbsp;&nbsp;<input id="body-font" value="Ubuntu"></p>
+
+                    <!-- <p>Nav Focus Opacity&nbsp;&nbsp;<input id="nav-focus-opacity" class="jscolor" value="0.85"></p> -->
+                    <!-- <p>Nav Selection Opacity&nbsp;&nbsp;<input id="nav-selection-opacity" class="jscolor" value="0.9"></p> -->
                 </div>
                 <!-- End CSS Generator -->
 
@@ -108,7 +112,7 @@
             </div>
             <footer role="contentinfo">
                 <div id="custom-footer-text">
-                    ||&nbsp;&nbsp;&nbsp;&nbsp; Copyright 2016 by Scott Enderle &nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp; All code and content is released under the terms of the <a href="https://opensource.org/licenses/MIT">MIT license</a>. &nbsp;&nbsp;&nbsp;&nbsp;||
+                    Copyright 2016 by Scott Enderle &nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp; All code and content is released under the terms of the <a href="https://opensource.org/licenses/MIT">MIT license</a>.
                 </div>
             </footer>
         </div>
