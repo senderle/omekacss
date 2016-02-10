@@ -5,8 +5,8 @@ if (!Applycss) {
 (function ($) {
     var customCssTemplate = [
         ' div#wrap {',
-        '  <<title-background-color>>',  // 'title-...' is a little confusing
-        '  <<body-text-color>>',         // but more accurate in UI terms.
+        '  <<global-background-color>>',
+        '  <<body-text-color>>',
         '  <<body-font>>',
         '}',
         ' h1 {',
@@ -17,7 +17,7 @@ if (!Applycss) {
         '  <<title-text-color>>',
         '  <<header-font>>',
         '}',
-        ' input,  button,  .button,  .show-advanced.button {',
+        ' .button,  .show-advanced.button {',
         '  <<button-background-color>>',
         '  <<button-text-color>>',
         '}',
@@ -45,10 +45,10 @@ if (!Applycss) {
         ' .top .sub-nav {',
         '  <<button-background-color>>',
         '}',
-        ' .top .sub-nav li > a:link,  .top .sub-nav li > a:visited {',
+        ' .top .sub-nav li a:link,  .top .sub-nav li a:visited {',
         '  <<title-text-color>>',
         '}',
-        ' .top .sub-nav li > a:active,  .top .sub-nav li > a:hover,  .top .sub-nav li > a:focus {',
+        ' .top .sub-nav li a:active,  .top .sub-nav li a:hover,  .top .sub-nav li a:focus {',
         '  <<link-hover-color>>',
         '}',
         ' #intro {',
@@ -70,7 +70,8 @@ if (!Applycss) {
         '}',
         // The child selector below gets wiped out but I'm not sure
         // it has much of an effect.
-        ' #home #content > div {',
+        ' #home #content div {',
+        '  <<content-background-color>>',
         '  <<content-border-color>>',
         '}',
         ' #home #content div .items-list .item {',
@@ -80,7 +81,7 @@ if (!Applycss) {
         ' #home #content div .items-list .item:first-of-type {',
         // '  border-top: 0;',
         '}',
-        ' #home #content > div img,  .items.show #itemfiles a,',
+        ' #home #content div img,  .items.show #itemfiles a,',
         ' #home #content .item,  #home #content div .view-items-link,',
         ' .collections #content div .view-items-link {',
         '  <<content-header-border-color>>',
@@ -95,13 +96,13 @@ if (!Applycss) {
         '  <<header-font>>',
         '}',
         // All child selectors get wiped out.
-        ' #content > div,  #content #primary > div,  #content #sidebar > div,',
-        ' #content #advanced-search-form > div,  #content #exhibit-pages {',
+        ' #content div,  #content #primary div,  #content #sidebar div,',
+        ' #content #advanced-search-form div,  #content #exhibit-pages {',
         '  <<content-border-color>>',
         '  <<content-background-color>>',
         '}',
         // All child selectors get wiped out.
-        ' #content #primary > div,  #content #sidebar > div,',
+        ' #content #primary div,  #content #sidebar div,',
         ' #content .item-pagination li {',
         '  <<content-background-color>>',
         '}',
@@ -142,7 +143,7 @@ if (!Applycss) {
         // All the funky CSS3 stuff here gets wiped out along with
         // the child selectors, etc.
         //' .exhibits #exhibit-pages > ul > li:not(:last-of-type) {',
-        ' .exhibits #exhibit-pages > ul > li {',
+        ' .exhibits #exhibit-pages ul li {',
         '  <<content-header-border-color>>',
         '}',
         // ' .exhibits.show #content .exhibit-page-nav > li:nth-child(3) {',
@@ -163,7 +164,7 @@ if (!Applycss) {
 
     var inputIdToAttrib = {
         'title-text-color': 'color',
-        'title-background-color': 'background-color',
+        'global-background-color': 'background-color',
         'header-text-color': 'color',
         'body-text-color': 'color',
         'body-background-color': 'background-color',
@@ -224,19 +225,18 @@ if (!Applycss) {
         return css;
     }
 
-    function cssCallback(inputId) {
-        return function () {
-            var css = cssRender(true);
-            $('#custom-style').remove();
-            $('head').append(styleTag('custom-style', css));
-            $('#css-container').text(css);
-        };
+    function cssCallback() {
+        var css = cssRender(true);
+        $('#custom-style').remove();
+        $('head').append(styleTag('custom-style', css));
+        $('#css-container').text(css);
     }
 
     Applycss.colorUi = function() {
         for (var i = 0, iid; iid = inputIds[i]; i++) {
-            $('input#' + iid).change(cssCallback(iid));
+            $('input#' + iid).change(cssCallback);
         }
+        cssCallback();
     };
 
 })(jQuery);

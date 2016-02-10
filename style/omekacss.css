@@ -4,5 +4,9 @@ textarea#css-container {
 }
 
 footer div#custom-footer-text {
-    font-size: 66%;
+    text-align: center;
+}
+
+.aside {
+    font-size: 70%;
 }
