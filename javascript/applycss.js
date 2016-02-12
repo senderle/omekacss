@@ -186,6 +186,11 @@ if (!Applycss) {
         //'nav-selection-opacity': 'opacity',
     };
 
+    function now() {
+        var d = new Date();
+        return d.getTime();
+    }
+
     function styleTag(tagId, css) {
         return '<style id="' + 
                tagId + 
@@ -227,9 +232,14 @@ if (!Applycss) {
 
     function cssCallback() {
         var css = cssRender(true);
+        var uri = 'data:text/css,' + encodeURIComponent(css);
+
         $('#custom-style').remove();
         $('head').append(styleTag('custom-style', css));
         $('#css-container').text(css);
+        $('a#css-container-download-anchor')
+            .attr('href', uri)
+            //.attr('download', 'custom-style-' + now() + '.css');
     }
 
     Applycss.colorUi = function() {

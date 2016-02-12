@@ -7,6 +7,16 @@ footer div#custom-footer-text {
     text-align: center;
 }
 
+#home #content span#css-container-download-button.download-button {
+    font-family: monospace, serif;
+    font-size: 66%;
+    color: #FFFFFF;
+    background-color: #666666 !important;
+    margin: 4px;
+    padding: 6px 8px 6px 8px;
+    cursor: pointer;
+}
+
 .aside {
     font-size: 70%;
 }
