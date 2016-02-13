@@ -242,19 +242,19 @@ if (!Applycss) {
             .attr('download', 'custom-style-' + now() + '.css');
     }
 
+    function cssSectionToggle(section) {
+        $('a#custom-css-section-' + section + '-show').click(function() {
+            $('div#custom-css-section-' + section).toggleClass('custom-css-hide');
+            return false;
+        });
+    }
+
     Applycss.colorUi = function() {
         for (var i = 0, iid; iid = inputIds[i]; i++) {
             $('input#' + iid).change(cssCallback);
         }
-        $('a#custom-css-section-color-show').click(function () {
-            $('div#custom-css-section-color').toggleClass('custom-css-hide');
-            return false;
-        });
-        $('a#custom-css-section-font-show').click(function () {
-            $('div#custom-css-section-font').toggleClass('custom-css-hide');
-            return false;
-        });
-
+        cssSectionToggle('color');
+        cssSectionToggle('font');
         cssCallback();
     };
 
