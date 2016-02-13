@@ -239,13 +239,22 @@ if (!Applycss) {
         $('#css-container').text(css);
         $('a#css-container-download-anchor')
             .attr('href', uri)
-            //.attr('download', 'custom-style-' + now() + '.css');
+            .attr('download', 'custom-style-' + now() + '.css');
     }
 
     Applycss.colorUi = function() {
         for (var i = 0, iid; iid = inputIds[i]; i++) {
             $('input#' + iid).change(cssCallback);
         }
+        $('a#custom-css-section-color-show').click(function () {
+            $('div#custom-css-section-color').toggleClass('custom-css-hide');
+            return false;
+        });
+        $('a#custom-css-section-font-show').click(function () {
+            $('div#custom-css-section-font').toggleClass('custom-css-hide');
+            return false;
+        });
+
         cssCallback();
     };
 

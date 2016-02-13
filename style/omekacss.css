@@ -1,22 +1,43 @@
 textarea#css-container {
     font-family: monospace, serif;
     font-size: 66%;
+    color: #FFFFFF;
 }
 
 footer div#custom-footer-text {
     text-align: center;
 }
 
-#home #content span#css-container-download-button.download-button {
-    font-family: monospace, serif;
+#home #content div#css-container-download-button.download-button {
+    /* Button Macro */
+    display: inline-block;
+    font-family: Arvo, sans-serif;
     font-size: 66%;
     color: #FFFFFF;
-    background-color: #666666 !important;
-    margin: 4px;
-    padding: 6px 8px 6px 8px;
-    cursor: pointer;
+    padding: 0em 0.5em;
+    border: 5px;
+    border-style: solid;
 }
 
 .aside {
     font-size: 70%;
 }
+
+.custom-css-hide {
+    display: none;
+}
+
+div.custom-css-section {
+    font-family: Arvo, sans-serif;
+    font-size: 75%;
+    color: #FFFFFF;
+    padding: 0em 0.5em;
+    margin: 1em;
+    border: 5px;
+    border-style: solid;
+}
+
+a.custom-css-section-show {
+    font-size: 125%;
+}
+

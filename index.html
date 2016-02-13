@@ -51,28 +51,37 @@
                     <h2>Generic Content Header</h2>
                     <h1>CSS Generator</h1>
                     <p class="item-description">This allows you to generate CSS for the custom CSS plugin that is now available on premium versions of <a href="http://www.omeka.net/">Omeka.net</a>. It assumes you're using the Seasons theme, with the "night" setting. Other combinations of theme and setting may not produce expected results -- but I encourage you to tinker around.</p>
-                    <h2>Colors</h2> 
-                    <p>Title Text Color&nbsp;&nbsp;<input id="title-text-color" class="jscolor" value="FFE000"></p>
-                    <p>Global Background Color&nbsp;&nbsp;<input id="global-background-color" class="jscolor" value="000000"></p>
-                    <p>Header Text Color&nbsp;&nbsp;<input id="header-text-color" class="jscolor" value="BDBDBD"></p>
-                    <p>Body Text Color&nbsp;&nbsp;<input id="body-text-color" class="jscolor" value="CCCCCC"></p>
-                    <p>Body Background Color&nbsp;&nbsp;<input id="body-background-color" class="jscolor" value="333333"></p>
-                    <p>Table Border Color&nbsp;&nbsp;<input id="table-border-color" class="jscolor" value="333333"></p>
-                    <p>Content Background Color&nbsp;&nbsp;<input id="content-background-color" class="jscolor" value="252525"></p>
-                    <p>Content Border Color&nbsp;&nbsp;<input id="content-border-color" class="jscolor" value="666666"></p>
-                    <p>Content Header Border Color&nbsp;&nbsp;<input id="content-header-border-color" class="jscolor" value="313131"></p>
-                    <p>Link Color&nbsp;&nbsp;<input id="link-color" class="jscolor" value="FFE000"></p>
-                    <p>Link Hover Color&nbsp;&nbsp;<input id="link-hover-color" class="jscolor" value="FFFFA0"></p>
-                    <p>Link Visited Color&nbsp;&nbsp;<input id="link-visited-color" class="jscolor" value="C0A900"></p>
-                    <p>Button Background Color&nbsp;&nbsp;<input id="button-background-color" class="jscolor" value="666666"></p>
-                    <p>Text Field Background Color&nbsp;&nbsp;<input id="text-field-background-color" class="jscolor" value="252525"></p>
-                    <p>Nav Background Color&nbsp;&nbsp;<input id="nav-background-color" class="jscolor" value="BDBDBD"></p>
-                    <p>Nav Link Color&nbsp;&nbsp;<input id="nav-link-color" class="jscolor" value="6D6D6D"></p>
-                    <p>Nav Hover Color&nbsp;&nbsp;<input id="nav-hover-color" class="jscolor" value="313131"></p>
-                    <h2>Fonts</h2>
-                    <p class="aside">Try Arvo, Helvetica, Garamond, or Arial Black; other fonts may be available depending on base theme.</p>
-                    <p>Header Font&nbsp;&nbsp;<input id="header-font" value="Arvo"></p>
-                    <p>Body Font&nbsp;&nbsp;<input id="body-font" value="Helvetica"></p>
+                    <div class="custom-css-section">
+                        <a id="custom-css-section-color-show" class="custom-css-section-show" href="#">Color Options...</a>
+                        <div id="custom-css-section-color" class="custom-css-options custom-css-hide">
+                            <p>Title Text Color&nbsp;&nbsp;<input id="title-text-color" class="jscolor" value="FFE000"></p>
+                            <p>Global Background Color&nbsp;&nbsp;<input id="global-background-color" class="jscolor" value="000000"></p>
+                            <p>Header Text Color&nbsp;&nbsp;<input id="header-text-color" class="jscolor" value="BDBDBD"></p>
+                            <p>Body Text Color&nbsp;&nbsp;<input id="body-text-color" class="jscolor" value="CCCCCC"></p>
+                            <p>Body Background Color&nbsp;&nbsp;<input id="body-background-color" class="jscolor" value="333333"></p>
+                            <p>Table Border Color&nbsp;&nbsp;<input id="table-border-color" class="jscolor" value="333333"></p>
+                            <p>Content Background Color&nbsp;&nbsp;<input id="content-background-color" class="jscolor" value="252525"></p>
+                            <p>Content Border Color&nbsp;&nbsp;<input id="content-border-color" class="jscolor" value="666666"></p>
+                            <p>Content Header Border Color&nbsp;&nbsp;<input id="content-header-border-color" class="jscolor" value="313131"></p>
+                            <p>Link Color&nbsp;&nbsp;<input id="link-color" class="jscolor" value="FFE000"></p>
+                            <p>Link Hover Color&nbsp;&nbsp;<input id="link-hover-color" class="jscolor" value="FFFFA0"></p>
+                            <p>Link Visited Color&nbsp;&nbsp;<input id="link-visited-color" class="jscolor" value="C0A900"></p>
+                            <p>Button Background Color&nbsp;&nbsp;<input id="button-background-color" class="jscolor" value="666666"></p>
+                            <p>Text Field Background Color&nbsp;&nbsp;<input id="text-field-background-color" class="jscolor" value="252525"></p>
+                            <p>Nav Background Color&nbsp;&nbsp;<input id="nav-background-color" class="jscolor" value="BDBDBD"></p>
+                            <p>Nav Link Color&nbsp;&nbsp;<input id="nav-link-color" class="jscolor" value="6D6D6D"></p>
+                            <p>Nav Hover Color&nbsp;&nbsp;<input id="nav-hover-color" class="jscolor" value="313131"></p>
+                        </div>
+                    </div>
+                    <div class="custom-css-section">
+                        <a id="custom-css-section-font-show" class="custom-css-section-show" href="#">Font Options...</a>
+                        <div id="custom-css-section-font" class="custom-css-options custom-css-hide">
+                            <h2>Fonts</h2>
+                            <p class="aside">Try Arvo, Helvetica, Garamond, or Arial Black; other fonts may be available depending on base theme.</p>
+                            <p>Header Font&nbsp;&nbsp;<input id="header-font" value="Arvo"></p>
+                            <p>Body Font&nbsp;&nbsp;<input id="body-font" value="Helvetica"></p>
+                        </div>
+                    </div>
 
                     <!-- <p>Nav Focus Opacity&nbsp;&nbsp;<input id="nav-focus-opacity" class="jscolor" value="0.85"></p> -->
                     <!-- <p>Nav Selection Opacity&nbsp;&nbsp;<input id="nav-selection-opacity" class="jscolor" value="0.9"></p> -->
@@ -88,10 +97,10 @@
                         <p class="item-description">A Description of the item.</p>
                     </div>
                     <div class="item record">
-                        <textarea id="css-container" rows="30">Custom CSS will appear here.</textarea>
-                        <span id="css-container-download-button" class="download-button">
+                        <div id="css-container-download-button" class="download-button">
                             <a id="css-container-download-anchor" href="#">Download CSS File</a>
-                        </span>
+                        </div>
+                        <textarea id="css-container" rows="30">Custom CSS will appear here.</textarea>
                     </div>
                 </div>
                 <div id="featured-collection">
